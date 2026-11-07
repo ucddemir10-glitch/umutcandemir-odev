@@ -13,14 +13,13 @@ function ProductCard({product,showButton}){
         .then((res)=> res.json())
         .then(()=> {
           navigate("/sepetim");
-           window.location.reload();
         });
       };
       const sepettenSil =()=>{
         fetch(`http://localhost:3000/cart/${product.id}`,
           {method: "DELETE",}
         ).then(() => {
-          window.location.reload();
+          
         });
       };
   
